@@ -5,13 +5,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Landing from './Screen/LandingScreen';
 import CustomerLanding from './Screen/CustomerLanding';
+import HomeScreen from './Screen/HomeScreen';
 import CustomerSignUp from './Screen/CustomerSignUp';
 import CustomerLogin from './Screen/CustomerLogin';
 import MerchantLogin from './Screen/MerchantLogin';
 import MerchantSignup from './Screen/MerchantSignup';
 import MerchantLanding from './Screen/MerchantLanding';
 import MerchantDashboard from './Screen/MerchantDashboard';
-
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -21,6 +21,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Landing" component={Landing} options={{headerShown:false}} />
         <Stack.Screen name="CustomerLanding" component={CustomerLanding} options={{headerShown:false}} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} options={{headerShown:false}} />
         <Stack.Screen name="CustomerSignUp" component={CustomerSignUp} options={{headerShown:false}} />
         <Stack.Screen name="CustomerLogin" component={CustomerLogin} options={{headerShown:false}} />
         <Stack.Screen name="MerchantLogin" component={MerchantLogin} options={{headerShown:false}} />
