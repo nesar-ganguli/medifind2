@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import {LinearGradient} from 'expo-linear-gradient';
 import { TextInput } from 'react-native-paper';
 import { useState } from "react";
+import HomeScreen from './HomeScreen';
 
 const {width, height} = Dimensions.get('window');
 
@@ -31,7 +32,7 @@ export default CustomerLogin = ({navigation}) =>  {
                 value={Password}
                 onChangeText={Password => setPassword(Password)}/>
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate('CustomerLogin')}>
+            <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
             <View style={styles.Login} >
                 <Text style={{fontSize:19, color:'#FFFFFF'}}>Login</Text>
             </View>
