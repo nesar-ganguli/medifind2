@@ -36,33 +36,33 @@ export default HomeScreen = ({navigation}) =>  {
             </View>
             <View style={styles.Body}>
                 <ScrollView>
-                     
+                <View style={styles.subBody}>
                 <View style={styles.box}>
-                    {/* <View style={styles.inner}>
-                    </View> */}
                     <TouchableOpacity>
                         <Image source={imageCovid}/>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.box}>
-                    {/* <View style={styles.inner}> */}  
-                    {/* </View> */}
                     <TouchableOpacity>
                         <Image source={imageCritical}/>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.box}>
-                    {/* <View style={styles.inner}> */}  
-                    {/* </View> */}
                     <TouchableOpacity>
                         <Image source={imageNeeds}/>
                     </TouchableOpacity>
+                </View>
+                </View>
+                <View style={styles.NearestButton}>
+                    <Text style={{fontSize:15}}>Find The Nearest Store</Text>
+                </View>
+                
+                </ScrollView>
+                <View style={styles.bottomNavi}>
                     
                 </View>
-                {/* </ScrollView>
-                </View> */}
-                <View style={styles.NearestButton}></View>
-                </ScrollView>
+               
+
             </View>
             {/* <View style={styles.Tail}>
             <Text> mc</Text>
@@ -93,11 +93,9 @@ const styles =StyleSheet.create({
         // flex:4,
         width:'100%',
         height:'55%',
-        backgroundColor:'#eee',
+        backgroundColor:'white',
         padding:'3%',
-        flexDirection:'row',
-        flexWrap:'wrap',
-        alignItems:'center',
+        
     },
     // Tail: {
     //     // flex:1,
@@ -126,7 +124,7 @@ const styles =StyleSheet.create({
     },
     box: {
         width: '33.33%',
-        // height: '%',
+        // height: '30%',
         padding: 5,
         
     },
@@ -138,7 +136,31 @@ const styles =StyleSheet.create({
         borderRadius:23,
     },
     NearestButton: {
-
-    }
+        backgroundColor:'#F9A826',
+        height:50,
+        width: '97%',
+        alignItems:'center',
+        justifyContent:'center',
+        borderRadius:26,
+        margin:5,
+        shadowColor: '0px 4px 4px rgba(0, 0, 0, 0.25)'
+    },
+    subBody: {
+        flexDirection:'row',
+        flexWrap:'wrap',
+        alignItems:'center',
+    },
+    bottomNavi: {
+        backgroundColor:'#00747B',
+        height:50,
+        width: '97%',
+        alignItems:'center',
+        justifyContent:'center',
+        borderRadius:26,
+        margin:5,
+        top:5,
+        
+    },
+   
 
 })
